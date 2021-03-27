@@ -29,7 +29,7 @@ jobs:
       run: |
         docker build -t sunoyon/titanic-mlops-base:${GITHUB_SHA::8} -f Dockerfile.pipeline .
         docker push sunoyon/titanic-mlops-base:${GITHUB_SHA::8}
-        docker tag  sunoyon/titanic-mlops-base:${GITHUB_SHA::8} chanwit/titanic-mlops-base:latest
+        docker tag  sunoyon/titanic-mlops-base:${GITHUB_SHA::8} sunoyon/titanic-mlops-base:latest
         docker push sunoyon/titanic-mlops-base:latest
 
     - name: Create changes back to Jupyter Notebook
